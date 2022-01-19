@@ -5,17 +5,12 @@
 Version vue 3 => utilisation de emits
 ```
 
-##Fonctionnalités
+#Fonctionnalités
 ```
-Les fonctionnalités attendues sont toutes réalisées
+Commander / vendre / acheter un article
+Equiper / enlever un objet
 ```
-     
-```
-Fonctionnalités optionnelles
-- affichage du nombre de boutique et du nombre d'objet total (stock+commande)
-pour chaque rue
-- affichage des catégories pour chaque magasin
-```
+   
 
 ### Image du projet
 
