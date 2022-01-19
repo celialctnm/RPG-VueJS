@@ -1,4 +1,4 @@
-# PROJET RPG VUEJS - Célia LEICHTNAM S3-A1
+# PROJET RPG VueJS
 
 ## Project setup
 ```
