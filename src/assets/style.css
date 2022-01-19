@@ -1,0 +1,53 @@
+.bouton {
+    background-color: #ffffff;
+    border-radius: 5px;
+    border: 1px solid #ac56ff;
+    color: #ac56ff;
+    padding: 5px;
+    width: 100px;
+    margin-top: 10px;
+    cursor: pointer;
+
+}
+
+.bouton:hover {
+    background-color: #ac56ff;
+    border-radius: 5px;
+    border: 1px solid #ac56ff;
+    color: #ffffff;
+    padding: 5px;
+    width: 100px;
+    margin-top: 10px;
+    cursor: pointer;
+
+}
+
+.row {
+    width: 500px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.divAssDessa {
+    width: 200px;
+    padding: 3px;
+    text-align: left;
+}
+
+.caracs {
+    margin-top:5px;
+    padding: 5px;
+    width: 100px;
+    height: 17px;
+    border: 2px solid;
+    border-radius: 7px
+}
+
+.blocAD{
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    padding: 2px;
+}
