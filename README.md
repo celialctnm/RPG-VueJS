@@ -17,6 +17,6 @@ pour chaque rue
 - affichage des catégories pour chaque magasin
 ```
 
-### Image montrant à quoi ressemble le projet
+### Image du projet
 
 ![img.png](src/assets/img.png)
