@@ -3,12 +3,16 @@
   <div>
     <perso-caracs :current-player="currentPlayer">
       <template v-slot:level>
-        <div style=" width: 100px; height: 60px; margin-right: 10px">
-          <div class="caracs" style="background-color: #60dfff; border: #60dfff">
-            Niveau {{this.currentPlayer.level}}
+        <div>
+          <div class="caracs">
+            {{this.currentPlayer.level}}
           </div>
-          <div class="caracs" style="background-color: #fca500; border: #fca500">
-            Argent {{this.currentPlayer.gold}}
+        </div>
+      </template>
+      <template v-slot:or>
+        <div style=" width: 100px; height: 60px; margin-right: 10px">
+          <div class="" style="background-color: #60dfff; border: #60dfff">
+            or {{this.currentPlayer.gold}}
           </div>
         </div>
       </template>

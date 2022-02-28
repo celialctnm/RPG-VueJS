@@ -1,58 +1,68 @@
 <template>
-  <div v-bind="currentPlayer">
-    <h2 style="color: #f10000"> {{ this.currentPlayer.name}}</h2>
-
-    <div style="display: flex; flex-direction: row;width: 400px; margin-right: auto; margin-left: auto; margin-bottom: 20px">
-      <div style="margin-right: 10px">
-        <div>
-          <slot name="level">
-            Niveau - Or
-          </slot>
-        </div>
-        <div class="caracs" style="background-color: #6ef12b; border: #6ef12b">
+  <div v-bind="currentPlayer" class="perso">
+    <table style="margin-right: auto; margin-left: auto; padding: 3%; width: 100%">
+      <tr>
+        <th id="box_perso_g">
           <div>
-            Vie {{calculerEffet.vie}}
+            <slot name="or">
+              Or
+            </slot>
+            <slot name="level">
+              Niveau
+            </slot>
           </div>
-        </div>
-        <div class="caracs" style="background-color: #fffc00; border: #fffc00">
-          <div>
-            Vitalité {{calculerEffet.vitalite}}
+          <div style="display: flex;flex-direction: row;" id="box_image">
+            <div v-if="this.currentPlayer.name === 'Neon' ">
+              <div>
+                <img src="../assets/neon.gif"/>
+              </div>
+            </div>
+            <div v-if="this.currentPlayer.name === 'Kururo' ">
+              <div>
+                <img src="../assets/kururo.gif"/>
+              </div>
+            </div>
+            <div v-if="this.currentPlayer.name === 'Hisoka' ">
+              <div>
+                <img src="../assets/hisoka.gif"/>
+              </div>
+            </div>
+            <div v-if="this.currentPlayer.name === 'Killua' ">
+              <div>
+                <img src="../assets/killua.gif"/>
+              </div>
+            </div>
           </div>
-        </div>
-        <div class="caracs" style="background-color: #ff2121; border: #ff2121">
-          <div>
-            Force {{ calculerEffet.force }}
+          <h2> {{ this.currentPlayer.name}}</h2>
+        </th>
+        <th id="box_perso_d">
+          <div style="display: flex; flex-direction: row;width: 400px; margin-right: auto; margin-left: auto; margin-bottom: 20px">
+            <div style="margin-right: 10px">
+              <div class="" style="background-color: #6ef12b; border: #6ef12b">
+                <div>
+                  Vie {{calculerEffet.vie}}
+                </div>
+              </div>
+              <div class="" style="background-color: #fffc00; border: #fffc00">
+                <div>
+                  Vitalité {{calculerEffet.vitalite}}
+                </div>
+              </div>
+              <div class="" style="background-color: #ff2121; border: #ff2121">
+                <div>
+                  Force {{ calculerEffet.force }}
+                </div>
+              </div>
+              <div class="" style="background-color: #d3d3d3; border: #d3d3d3">
+                <div>
+                  Armure {{calculerEffet.armure}}
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
-        <div class="caracs" style="background-color: #d3d3d3; border: #d3d3d3">
-          <div>
-            Armure {{calculerEffet.armure}}
-          </div>
-        </div>
-      </div>
-      <div style="display: flex;flex-direction: row;">
-        <div v-if="this.currentPlayer.name === 'Neon' ">
-          <div>
-            <img src="../assets/neon.gif" style="width: 300px; height: 195px"/>
-          </div>
-        </div>
-        <div v-if="this.currentPlayer.name === 'Kururo' ">
-          <div>
-            <img src="../assets/kururo.gif" style="width: 300px; height: 195px"/>
-          </div>
-        </div>
-        <div v-if="this.currentPlayer.name === 'Hisoka' ">
-          <div>
-            <img src="../assets/hisoka.gif" style="width: 300px; height: 195px"/>
-          </div>
-        </div>
-        <div v-if="this.currentPlayer.name === 'Killua' ">
-          <div>
-            <img src="../assets/killua.gif" style="width: 300px; height: 195px"/>
-          </div>
-        </div>
-      </div>
-    </div>
+        </th>
+      </tr>
+    </table>
   </div>
 </template>
 

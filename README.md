@@ -39,4 +39,4 @@ Equiper / enlever un objet
 
 ### Image du projet
 
-![img.png](src/assets/img.png)
+![img.png](rpg-vue/src/assets/img.png)

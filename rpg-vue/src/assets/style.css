@@ -35,15 +35,6 @@
     text-align: left;
 }
 
-.caracs {
-    margin-top:5px;
-    padding: 5px;
-    width: 100px;
-    height: 17px;
-    border: 2px solid;
-    border-radius: 7px
-}
-
 .blocAD{
     width: 500px;
     margin-left: auto;
@@ -51,3 +42,46 @@
     margin-top: 20px;
     padding: 2px;
 }
+
+/*
+Perso CSS
+ */
+
+.caracs {
+    background-color: red;
+    width: 50px;
+    text-align: center;
+    color: white;
+    margin-left: 150px;
+    margin-bottom: -15px;
+    padding: 5px;
+    border-radius: 20px;
+
+}
+
+/*
+Perso caracs CSS
+ */
+
+.perso {
+    background-color: #eeeeee;
+    width: 70%;
+    height: 100%;
+}
+
+#box_image img {
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+    background-color: white;
+}
+
+#box_perso_g {
+    background-color: #ac56ff;
+    padding-left: 13px;
+}
+
+#box_perso_d {
+    background-color: #d53f92;
+}
+
