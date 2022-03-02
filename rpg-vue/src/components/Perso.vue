@@ -10,9 +10,10 @@
         </div>
       </template>
       <template v-slot:or>
-        <div style=" width: 100px; height: 60px; margin-right: 10px">
-          <div class="" style="background-color: #60dfff; border: #60dfff">
-            or {{this.currentPlayer.gold}}
+        <div id="or">
+          <div style="display: flex">
+            <p>{{this.currentPlayer.gold}}</p>
+            <img src="../assets/or.png"/>
           </div>
         </div>
       </template>

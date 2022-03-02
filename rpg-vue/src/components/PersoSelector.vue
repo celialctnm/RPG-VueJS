@@ -1,11 +1,13 @@
 <template>
-  Sélectionner un personnage
-  <!-- Selectionner le personnage courant -->
-  <select @change="selectPlayer($event.target.value)">
-    <option v-for="(player,index) in teams" :key="index" v-bind:value="index">
-      {{player.name}}
-    </option>
-  </select>
+  <div id="perso_selector">
+    Sélectionner un personnage
+    <!-- Selectionner le personnage courant -->
+    <select @change="selectPlayer($event.target.value)">
+      <option v-for="(player,index) in teams" :key="index" v-bind:value="index">
+        {{player.name}}
+      </option>
+    </select>
+  </div>
 </template>
 
 <script>

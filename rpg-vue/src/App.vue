@@ -1,5 +1,5 @@
 <template>
-  <table style="margin-right: auto; margin-left: auto; padding: 3%; width: 100%">
+  <table style="width: 100%;">
     <tr>
       <th>
         <team @buy="buy($event)" :item-buy="itemBuy" @changeItemBuy="changeItem($event)" @order="order($event)"></team>

@@ -1,16 +1,19 @@
 <template>
   <!-- Slots et objets achetés -->
   <div v-bind="currentPlayer">
-    <table border="1" style="margin-right: auto; margin-left: auto">
-      <tr v-for="(slot,index) in currentPlayer.slots" :key="index">
-        <td>
-          {{ slot.name }}
-        </td>
-        <td v-for="(item,index) in slot.items" :key="index">
-          {{item.name}}
-        </td>
-      </tr>
-    </table>
+    <div id="tab_equipement">
+      <table border="1">
+        <tr v-for="(slot,index) in currentPlayer.slots" :key="index">
+          <td>
+            {{ slot.name }}
+          </td>
+          <td v-for="(item,index) in slot.items" :key="index">
+            {{item.name}}
+          </td>
+        </tr>
+      </table>
+    </div>
+
 
     <div style="margin-bottom: 10px; margin-top: 20px">
       Items achetés

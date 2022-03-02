@@ -1,12 +1,9 @@
 <template>
   <div v-bind="currentPlayer" class="perso">
-    <table style="margin-right: auto; margin-left: auto; padding: 3%; width: 100%">
+    <table>
       <tr>
         <th id="box_perso_g">
           <div>
-            <slot name="or">
-              Or
-            </slot>
             <slot name="level">
               Niveau
             </slot>
@@ -36,29 +33,32 @@
           <h2> {{ this.currentPlayer.name}}</h2>
         </th>
         <th id="box_perso_d">
-          <div style="display: flex; flex-direction: row;width: 400px; margin-right: auto; margin-left: auto; margin-bottom: 20px">
-            <div style="margin-right: 10px">
-              <div class="" style="background-color: #6ef12b; border: #6ef12b">
-                <div>
-                  Vie {{calculerEffet.vie}}
-                </div>
-              </div>
-              <div class="" style="background-color: #fffc00; border: #fffc00">
-                <div>
-                  Vitalité {{calculerEffet.vitalite}}
-                </div>
-              </div>
-              <div class="" style="background-color: #ff2121; border: #ff2121">
-                <div>
-                  Force {{ calculerEffet.force }}
-                </div>
-              </div>
-              <div class="" style="background-color: #d3d3d3; border: #d3d3d3">
-                <div>
-                  Armure {{calculerEffet.armure}}
-                </div>
+          <div id="box_perso_c">
+            <div class="box_perso_competence" style="background-color: #fffc00; border: #fffc00">
+              <div>
+                Vitalité {{calculerEffet.vitalite}}
               </div>
             </div>
+            <div class="box_perso_competence" style="background-color: #70e5ff; border: #70e5ff">
+              <div>
+                Force {{ calculerEffet.force }}
+              </div>
+            </div>
+            <div class="box_perso_competence" style="background-color: #d3d3d3; border: #d3d3d3">
+              <div>
+                Armure {{calculerEffet.armure}}
+              </div>
+            </div>
+          </div>
+
+          <div id="orVie">
+            <slot name="or">
+              Or
+            </slot>
+              <div id="vie">
+                {{calculerEffet.vie}}
+                <img src="../assets/coeur.png"/>
+              </div>
           </div>
         </th>
       </tr>
