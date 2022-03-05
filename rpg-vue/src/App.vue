@@ -1,7 +1,7 @@
 <template>
   <table style="width: 100%;">
     <tr>
-      <th>
+      <th style="width: 60%">
         <team @buy="buy($event)" :item-buy="itemBuy" @changeItemBuy="changeItem($event)" @order="order($event)"></team>
       </th>
       <th>
