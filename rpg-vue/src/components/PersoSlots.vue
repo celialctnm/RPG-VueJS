@@ -16,7 +16,7 @@
 
 
     <div id="assign">
-      <div style="margin-bottom: 10px; margin-top: 20px">
+      <div>
         Items achetés
         <br>
         <input readonly="readonly" :value="itemAchete" style="width: 300px; height: 20px; margin-top: 5px">

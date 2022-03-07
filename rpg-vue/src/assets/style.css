@@ -70,7 +70,7 @@ Perso selector
 #perso_selector {
     width: 25%;
     padding: 3%;
-    margin-left: 22%;
+    margin-left: 40%;
     margin-bottom: 10px;
     background-image: url("../assets/select.png");
     background-size: contain;
@@ -90,6 +90,7 @@ Perso caracs CSS
     background-image: url("../assets/perso.png");
     background-size: contain;
     background-repeat: no-repeat;
+    margin-left: 15%;
 
 }
 
@@ -178,18 +179,28 @@ Perso slots
     background-repeat: no-repeat;
     background-image: url("../assets/tab.png");
     background-size: contain;
+    margin-left: 15%;
 }
 
 
 #assign {
-    background-color: #fca500;
+    background-repeat: no-repeat;
+    background-image: url("../assets/fond_ops.png");
+    background-size: contain;
+    padding: 3%;
+    margin-left: 6%;
 }
 
 /*
 perso ops
  */
 #persoops {
-    background-color: #ac56ff;
+    background-repeat: no-repeat;
+    background-image: url("../assets/fond_achat.png");
+    background-size: contain;
+    margin-left: 11%;
+    margin-top: 5%;
+    padding: 3%;
 }
 
 body {
