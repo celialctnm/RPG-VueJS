@@ -313,6 +313,19 @@ class Slot {
     }
 }
 
+class Monstre {
+	constructor(name) {
+		this.name = name;
+		this.vie = 12000;
+		this.force = 100;
+	}
+
+	monstreMort(){
+		this.etat = false;
+	}
+
+}
+
 class Perso {
 
     static counter = 0;
@@ -385,6 +398,9 @@ class Perso {
     }
 }
 
+var monstres = [
+	new Monstre("T-Rex")
+];
 
 var teams = [
     new Perso("Kururo",150), new Perso("Neon",100), new Perso("Killua",180),new Perso("Hisoka",155)
@@ -394,4 +410,4 @@ var towns = [
 	greedIsland, zaban, yorkShin
 ];
 
-export { towns, teams }
+export { towns, teams, monstres}

@@ -2,18 +2,20 @@
   <!-- Selectionner le personnage courant -->
   <perso-selector :teams="teams" @sPlayer="selectPlayer($event.id)"></perso-selector>
   <perso :current-player="currentPlayer" @changeItemBuy="buyV2($event)" @order="order($event)" @sell="sell($event)" @buy="buy($event)" @assign="assign($event)" @dassign="dassign($event)" @loadCurrentPlayer="loadCurrentPlayer"></perso>
+  <combat :monstres="monstre" :current-player="currentPlayer"></combat>
 </template>
 
 
 <script>
-import {teams} from '../model';
+import {teams, monstres} from '../model';
 import PersoSelector from "./PersoSelector";
 import Perso from "./Perso";
+import Combat from "./Combat";
 
 export default {
   name: 'Team',
   emits: ['buy', 'changeItemBuy', 'order'],
-  components: {PersoSelector, Perso},
+  components: {Combat, PersoSelector, Perso},
   props: {
     itemBuy: Object,
   },
@@ -21,6 +23,7 @@ export default {
     return {
       teams,
       currentPlayer: teams[0],
+      monstre: monstres[0],
     }
   },
   computed: {
@@ -30,6 +33,7 @@ export default {
     selectPlayer(id)  {
       this.currentPlayer = this.teams[id];
     },
+
 
     selectStreet(id) {
       this.currentStreet = this.currentTown.streets[id];

@@ -205,7 +205,21 @@ perso ops
 
 body {
     font-family: Papyrus;
-    background-image: url("../assets/paysage.png");
+    background-image: url("../assets/testdimfond.jpeg");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#stock {
+    background-image: url("../assets/tableau.png");
     background-size: cover;
     background-repeat: no-repeat;
+    border-right: 6px solid #795548;
+}
+
+#order {
+    background-image: url("../assets/tableau.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-bottom: 5px solid #795548;
 }
