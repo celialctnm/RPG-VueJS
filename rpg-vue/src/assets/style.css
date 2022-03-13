@@ -206,7 +206,7 @@ perso ops
 body {
     font-family: Papyrus;
     background-image: url("../assets/testdimfond.jpeg");
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
 }
 
@@ -222,4 +222,62 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     border-bottom: 5px solid #795548;
+}
+
+#combat {
+    background-image: url("../assets/combat.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-right: #795548 8px solid;
+}
+
+#boutonAttaquer {
+    background-color: #ffffff;
+    border-radius: 5px;
+    border: 1px solid #e0031e;
+    color: #e0031e;
+    padding: 5px;
+    width: 100px;
+    margin-top: 10px;
+    cursor: pointer;
+    margin-right: 10px;
+
+}
+
+#boutonAttaquer:hover {
+    background-color: #e0031e;
+    border-radius: 5px;
+    border: 1px solid #e0031e;
+    color: #ffffff;
+    padding: 5px;
+    width: 100px;
+    margin-top: 10px;
+    cursor: pointer;
+
+}
+
+#boutonEsquiver {
+    background-color: #ffffff;
+    border-radius: 5px;
+    border: 1px solid #239d1a;
+    color: #239d1a;
+    padding: 5px;
+    width: 100px;
+    margin-top: 10px;
+    cursor: pointer;
+    margin-left: 10px;
+    margin-bottom: 10px;
+
+}
+
+#boutonEsquiver:hover {
+    background-color: #239d1a;
+    border-radius: 5px;
+    border: 1px solid #239d1a;
+    color: #ffffff;
+    padding: 5px;
+    width: 100px;
+    margin-top: 10px;
+    cursor: pointer;
+
 }

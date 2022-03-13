@@ -4,14 +4,13 @@
     <div v-for="(shops,index) in shopTab" :key="index"  :value="index" >
       <input @change="selectShop($event.target.value)" type="radio" :id="index" name="shop" :value="index">
       <label :for="shops.id">{{ shops }}</label>
-      <table style="color: #ac56ff; margin: -3px auto 5px auto;">
+      <table style="color: #ee05db; margin: -3px auto 5px auto;">
         <tr>
           <td v-for="(cat,ind) in categorie[index]" :key="ind" :value="index">
             {{cat}}
           </td>
         </tr>
       </table>
-
     </div>
 </template>
 

@@ -65,26 +65,30 @@
         </tr>
       </table>
     </div>
-    <div style="background-color: #ac56ff">
-      <h1>Combat</h1>
-      <div style="display: flex; background-color: #d53f92; width: 170px; margin-right: auto; margin-left: auto">
-        <div>
-          Vie joueur
-          <br>
-          {{ vieJoueur }}
+    <div>
+      <div id="combat">
+        <h1 style="padding-top: 10px">Combat</h1>
+        <p> Vous venez de boire une potion afin de vous donner du courage, vous avez maintenant 10 000 points de vie jusqu'à la fin du combat</p>
+        <div style="display: flex; margin-right: auto; margin-left: auto">
+          <div style="width: 170px;">
+            Vie {{ this.currentPlayer.name }}
+            <br>
+            {{ vieJoueur }}
+          </div>
+          <div style="width: 170px; margin-left: 280px">
+            Vie T-Rex
+            <br>
+            {{attaquer.vieMonstre}}
+            <img style="height: 200px" src="../assets/dragon.png">
+          </div>
         </div>
-       <div v-if="this.action === true">
-         {{this.currentPlayer.name}} a lancé une attaque
-       </div>
-        <div style="margin-left: 10px">
-          Vie monstre
-          <br>
-          {{attaquer.vieMonstre}}
-        </div>
+        <br>
+        <p id="texteCombat">
+          {{this.currentPlayer.name}} est prêt à se battre
+        </p>
+        <button id="boutonAttaquer" @click="isTrue"> attaquer </button>
+        <button id="boutonEsquiver" @click="isTrueEsquive"> esquiver </button>
       </div>
-      <br>
-      <button @click="isTrue"> attaquer </button>
-      <button @click="isTrueEsquive"> esquiver </button>
     </div>
   </div>
 </template>
@@ -159,17 +163,29 @@ export default {
         this.isImage();
         //Monstre attaque
         this.vieJoueurPerd();
-        console.log("Vie joueur : " + this.vieJoueurCombat)
-        //this.isFalse();
+        this.isFalseEsquive();
+        this.isFalse();
+        let texte = document.getElementById("texteCombat");
+        texte.innerText = this.currentPlayer.name + " vient de lancer une attaque";
+      }
+
+      if (this.esquive === true && monstres[0].vie > 0){
+        let texte = document.getElementById("texteCombat");
+        texte.innerText = this.currentPlayer.name + " vient d'esquiver";
+        this.isFalseEsquive();
+        this.isFalse();
       }
 
       if (this.vieJoueurCombat < 0){
-        console.log("Le joueur est mort");
+        let texte = document.getElementById("texteCombat");
+        texte.innerText = this.currentPlayer.name + " a été tué";
         return vie;
       }
 
       if (monstres[0].vie < 0){
-        console.log("est mort")
+        let texte = document.getElementById("texteCombat");
+        texte.innerText = monstres[0].name + " a été tué";
+        monstres[0].vie = 0;
         return vie;
       }
       return vie;
@@ -177,13 +193,6 @@ export default {
 
     vieJoueur(){
       return this.vieJoueurCombat;
-    },
-
-    esquiver(){
-      if (this.esquive === true){
-        console.log("esquive")
-      }
-      return null;
     },
 
     calculerEffet(){

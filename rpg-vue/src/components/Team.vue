@@ -2,7 +2,6 @@
   <!-- Selectionner le personnage courant -->
   <perso-selector :teams="teams" @sPlayer="selectPlayer($event.id)"></perso-selector>
   <perso :current-player="currentPlayer" @changeItemBuy="buyV2($event)" @order="order($event)" @sell="sell($event)" @buy="buy($event)" @assign="assign($event)" @dassign="dassign($event)" @loadCurrentPlayer="loadCurrentPlayer"></perso>
-  <combat :monstres="monstre" :current-player="currentPlayer"></combat>
 </template>
 
 
@@ -10,12 +9,11 @@
 import {teams, monstres} from '../model';
 import PersoSelector from "./PersoSelector";
 import Perso from "./Perso";
-import Combat from "./Combat";
 
 export default {
   name: 'Team',
   emits: ['buy', 'changeItemBuy', 'order'],
-  components: {Combat, PersoSelector, Perso},
+  components: {PersoSelector, Perso},
   props: {
     itemBuy: Object,
   },

@@ -2,7 +2,7 @@
   <town-selector :towns-tab="TownTab" @selectTown="selectTown($event.id)"></town-selector>
 
   <div v-if="currentTown!=null">
-    <h1 style="color: #fca500"> Bienvenue à {{ this.currentTown.name }}</h1>
+    <h1 style="color: #4f44e5"> Bienvenue à {{ this.currentTown.name }}</h1>
   </div>
 
   <div v-if="currentTown!=null">
@@ -15,7 +15,7 @@
   </div>
 
   <div v-if="currentShop!=null">
-    <h3 style="color: #57ce1b"> Vous avez choisi {{this.currentShop.name}}</h3>
+    <h3 style="color: #a91db2"> Vous avez choisi {{this.currentShop.name}}</h3>
   </div>
 
 

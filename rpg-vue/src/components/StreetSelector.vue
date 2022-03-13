@@ -4,7 +4,7 @@
     <div v-for="(street,index) in streetTab" :key="index"  :value="index" >
       <input @change="selectStreet($event.target.value)" type="radio" :id="index" name="street" :value="index">
       <label :for="street">{{ street }}</label>
-      <p style="color: #ac56ff; margin-top: -2px"> {{nbrBoutique[index]}} magasins - {{somme[index]}} objets</p>
+      <p style="color: #ee05db; margin-top: -2px"> {{nbrBoutique[index]}} magasins - {{somme[index]}} objets</p>
     </div>
   </div>
 </template>
